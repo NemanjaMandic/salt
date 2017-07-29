@@ -1580,6 +1580,18 @@ a.moretag span:hover{
     width: 94.2vw;
     height: 233px;
 }
+
+.monkey-stuff p{
+	font-size: 2rem;
+
+}
+
+.monkey-stuff a{
+	color: black;
+}
+.monkey-stuff a:hover{
+	color: #404040;
+}
 .gallery-icon a{
 	-webkit-transition: all 0.2s ease-out;
     -moz-transition: all 0.2s ease-out;
@@ -1617,6 +1629,12 @@ a.moretag span:hover{
     animation-duration: 3s;
     animation-fill-mode: forwards;
    
+}
+
+.nav-links {
+    background: blue;
+    height: 150px;
+    padding: 50px;
 }
 
 #post-odd{
