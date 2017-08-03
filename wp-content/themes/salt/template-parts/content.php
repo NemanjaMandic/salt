@@ -8,17 +8,27 @@
  */
 
 ?>
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+ <?php $id = get_the_ID() % 2 == 0 ? 'even-blog' : 'odd-blog'; ?>
+
+<article id="post-<?php echo $id; ?>" <?php post_class(); ?>>
 	<header class="entry-header">
-		<?php the_title( '<h1 class="entry-title">',' </h1>' ); ?>
+		
 	
-	
+	 <a href="<?php the_permalink() ?>" title="<?php the_title(); ?>"><?php the_title( '<h1 class="entry-title">',' </h1>' ); ?></a>
+	 <span class="entry-date"><?php echo get_the_date(); ?></span>
 	</header><!-- .entry-header -->
 
 	<div class="entry-content">
-		<?php
-			the_excerpt();
-          
+		<div class="post-text-wrapper">
+			<?php the_excerpt(); ?>
+		</div>
+          <?php if(has_post_thumbnail()): ?>
+           <div class="post-image-wrapper">
+           	<?php the_post_thumbnail('medium_large' ); ?> 
+           </div>
+           
+           <?php
+           endif;
 			wp_link_pages( array(
 				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'salt' ),
 				'after'  => '</div>',

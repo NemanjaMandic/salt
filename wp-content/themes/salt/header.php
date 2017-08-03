@@ -36,7 +36,7 @@
 			?>
 		</div><!-- .site-branding -->
 
-        	<nav id="site-navigation-top" class="main-navigation-top">
+        <nav id="site-navigation-top" class="main-navigation-top">
 			<?php
 				wp_nav_menu( array(
 					'theme_location' => 'menu-1',
@@ -44,9 +44,33 @@
 				) );
 			?>
 		</nav><!-- #site-navigation -->
-		
+			<style>
+			
+					
+			</style>
+			
+			<div id="mySidenav" class="sidenav">
+			  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+				 <?php
+					wp_nav_menu( array(
+						'theme_location' => 'menu-2',
+						'menu_id'        => 'primary-menu-bottom',
+						'walker'         => new My_Walker(),
+					) );
+				?>
+			</div>
+			<span class="open-menu" style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; open</span>
+			<script>
+				function openNav() {
+				    document.getElementById("mySidenav").style.width = "250px";
+				}
+				
+				function closeNav() {
+				    document.getElementById("mySidenav").style.width = "0";
+				}
+			</script>
 		<nav id="site-navigation" class="main-navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'salt' ); ?></button>
+			
 			<?php
 				wp_nav_menu( array(
 					'theme_location' => 'menu-2',
