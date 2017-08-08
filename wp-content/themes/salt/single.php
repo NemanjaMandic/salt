@@ -49,7 +49,16 @@ get_header(); ?>
 </div>
 
 		</main><!-- #main -->
-		<?php 	the_post_navigation(); ?>
+		<div class="nav-links">
+			<div class="nav-previous child">
+				<?php previous_post_link('<strong><span class="hover-left">%link</span></strong>'); ?>
+			</div>
+			<div class="nav-next child">
+				 <?php next_post_link('<strong><span class="hover-right">%link</span></strong>'); ?>
+			</div>
+			   
+		</div>
+		 
 		
 	</div><!-- #primary -->
  

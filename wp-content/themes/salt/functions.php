@@ -164,6 +164,9 @@ function strip_shortcode_gallery( $content ) {
     return $content;
 }
 
+
+
+
 /**
  * Implement the Custom Header feature.
  */
