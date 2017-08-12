@@ -44,13 +44,10 @@
 				) );
 			?>
 		</nav><!-- #site-navigation -->
-			<style>
 			
-					
-			</style>
 			
 			<div id="mySidenav" class="sidenav">
-			  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+			  <a href="javascript:void(0)" class="closebtn" id="closeNav">&times;</a>
 				 <?php
 					wp_nav_menu( array(
 						'theme_location' => 'menu-2',
@@ -59,16 +56,8 @@
 					) );
 				?>
 			</div>
-			<span class="open-menu" style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; open</span>
-			<script>
-				function openNav() {
-				    document.getElementById("mySidenav").style.width = "250px";
-				}
-				
-				function closeNav() {
-				    document.getElementById("mySidenav").style.width = "0";
-				}
-			</script>
+			<span class="open-menu" style="font-size:30px;cursor:pointer" id="openNav">&#9776; open</span>
+		
 		<nav id="site-navigation" class="main-navigation">
 			
 			<?php
